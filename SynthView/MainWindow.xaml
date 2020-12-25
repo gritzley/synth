@@ -1,0 +1,30 @@
+﻿<Window x:Class="SynthView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:local="clr-namespace:SynthView"
+        xmlns:viewModels="clr-namespace:SynthView.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{dxmvvm:ViewModelSource Type=viewModels:MainWindowVM}"
+        d:DataContext="{d:DesignInstance Type=viewModels:MainWindowVM}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <DockPanel VerticalAlignment="Center" Margin="10" Grid.Row="0">
+            <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" />
+            <Slider Minimum="0" Maximum="135" Name="slValue" Value="{Binding Pitch}">
+                <dxmvvm:Interaction.Behaviors>
+                    <dxmvvm:EventToCommand EventName="ValueChanged" Command="{Binding UpdatePitchCommand}" />
+                </dxmvvm:Interaction.Behaviors>
+            </Slider>
+        </DockPanel>
+        <Button Command="{Binding ToggleNoteACommand}" Grid.Row="1">Play</Button>
+        <Button Command="{Binding ToggleNoteBCommand}" Grid.Row="2">Pause</Button>
+    </Grid>
+</Window>

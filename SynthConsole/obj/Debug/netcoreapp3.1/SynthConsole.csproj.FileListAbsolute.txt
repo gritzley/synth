@@ -1,0 +1,16 @@
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\Synthesizer.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.csprojAssemblyReference.cache
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.AssemblyInfoInputs.cache
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.AssemblyInfo.cs
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\SynthConsole.exe
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\SynthConsole.deps.json
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\SynthConsole.runtimeconfig.json
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\SynthConsole.runtimeconfig.dev.json
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\SynthConsole.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\SynthConsole.pdb
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\NAudio.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\System.Resources.Extensions.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\Synthesizer.pdb
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.csproj.CopyComplete
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.pdb
