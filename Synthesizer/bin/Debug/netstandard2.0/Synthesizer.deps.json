@@ -12,7 +12,9 @@
           "Melanchall.DryWetMidi": "5.1.2",
           "NAudio": "1.10.0",
           "NETStandard.Library": "2.0.3",
-          "System.Reactive": "5.0.0"
+          "System.Reactive": "5.0.0",
+          "System.Runtime.WindowsRuntime": "4.0.0.0",
+          "Windows": "255.255.255.255"
         },
         "runtime": {
           "Synthesizer.dll": {}
@@ -153,6 +155,22 @@
             "fileVersion": "4.6.28619.1"
           }
         }
+      },
+      "System.Runtime.WindowsRuntime/4.0.0.0": {
+        "runtime": {
+          "System.Runtime.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.30319.18020"
+          }
+        }
+      },
+      "Windows/255.255.255.255": {
+        "runtime": {
+          "Windows.winmd": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "0.0.0.0"
+          }
+        }
       }
     }
   },
@@ -273,6 +291,16 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "System.Runtime.WindowsRuntime/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Windows/255.255.255.255": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -12,19 +12,20 @@
         d:DataContext="{d:DesignInstance Type=viewModels:MainWindowVM}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
-        <DockPanel VerticalAlignment="Center" Margin="10" Grid.Row="0">
+        <!--<DockPanel VerticalAlignment="Center" Margin="10" Grid.Row="0">
             <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" />
             <Slider Minimum="0" Maximum="135" Name="slValue" Value="{Binding Pitch}">
                 <dxmvvm:Interaction.Behaviors>
-                    <dxmvvm:EventToCommand EventName="ValueChanged" Command="{Binding UpdatePitchCommand}" />
+                    <dxmvvm:EventToCommand EventName="ValueChanged" Command="" />
                 </dxmvvm:Interaction.Behaviors>
             </Slider>
-        </DockPanel>
-        <Button Command="{Binding ToggleNoteACommand}" Grid.Row="1">Play</Button>
-        <Button Command="{Binding ToggleNoteBCommand}" Grid.Row="2">Pause</Button>
+        </DockPanel>-->
+        <Button Command="{Binding ToggleNoteACommand}" Grid.Row="0">Note A</Button>
+        <Button Command="{Binding ToggleNoteBCommand}" Grid.Row="1">Note B</Button>
+        <ListBox Grid.Row="2" x:Name="midiInPortListBox"/>
     </Grid>
 </Window>

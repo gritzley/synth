@@ -6,3 +6,7 @@ C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\obj\Debug\netst
 C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\bin\Debug\netstandard2.0\Synthesizer.pdb
 C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\obj\Debug\netstandard2.0\Synthesizer.dll
 C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\obj\Debug\netstandard2.0\Synthesizer.pdb
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\bin\Debug\netstandard2.0\System.Runtime.WindowsRuntime.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\bin\Debug\netstandard2.0\Windows.winmd
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\bin\Debug\netstandard2.0\System.Runtime.WindowsRuntime.xml
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\Synthesizer\obj\Debug\netstandard2.0\Synthesizer.csproj.CopyComplete

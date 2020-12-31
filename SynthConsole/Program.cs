@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Synthesizer;
+using Melanchall.DryWetMidi.Devices;
 
 namespace SynthConsole
 {
@@ -8,41 +9,75 @@ namespace SynthConsole
     {
         enum ProgramState
         {
-            startup,
-            exit,
-            unhandled
+            Startup,
+            Exit,
+            SingleWaveTest,
+            Unhandled
         }
-        static ProgramState programState;
-        static private string input;
-        static SynthData SynthData;
+        private static ProgramState state;
+        private static string input;
+        private static SingleWaveProvider swp;
+
         static void Main(string[] args)
         {
-            Synth synth = new Synth(SynthData);
-            SynthData = new SynthData(500);
-            programState = ProgramState.startup;
-            ThreadPool.QueueUserWorkItem(state => synth.PlayWaveform());
+            state = ProgramState.Startup;
+            swp = new SingleWaveProvider();
+            swp.Frequency = 440;
+            swp.Amplitude = 5000;
+
+            Console.WriteLine("Welcome");
+
             do Run();
-            while (ParseInput(Read()) != ProgramState.exit);
+            while (state != ProgramState.Exit); ;
         }
         private static void Run()
         {
             Console.Write(">");
+            ParseInput(Read());
+            switch (state)
+            {
+                case ProgramState.SingleWaveTest:
+                    SingleWaveTest();
+                    break;
+                case ProgramState.Exit:
+                    Console.WriteLine("bye!");
+                    break;
+            }
+
         }
+
+        private static void SingleWaveTest()
+        {
+            short[] buffer = new short[60];
+            swp.Read(buffer, 0, 60);
+
+            Console.WriteLine(String.Join(", ", buffer));
+        }
+
         private static string Read()
         {
             input = Console.ReadLine();
             return input;
         }
-
-        private static ProgramState ParseInput(string s)
+        private static void OnEventReceived(object sender, MidiEventReceivedEventArgs e)
+        {
+            var midiDevice = (MidiDevice)sender;
+            Console.WriteLine($"Event received from '{midiDevice.Name}' at {DateTime.Now}: {e.Event.ToString()}");
+        }
+        private static void ParseInput(string s)
         {
             switch (s)
             {
                 case "x":
                 case "exit":
-                    return ProgramState.exit;
+                    state = ProgramState.Exit;
+                    break;
+                case "test":
+                    state = ProgramState.SingleWaveTest;
+                    break;
                 default:
-                    return ProgramState.unhandled;
+                    state = ProgramState.Unhandled;
+                    break;
             }
         }
     }

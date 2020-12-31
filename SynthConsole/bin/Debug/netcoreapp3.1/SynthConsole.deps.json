@@ -9,10 +9,19 @@
       "SynthConsole/1.0.0": {
         "dependencies": {
           "NAudio": "1.10.0",
-          "Synthesizer": "1.0.0"
+          "Synthesizer": "1.0.0",
+          "System.Reactive.Reference": "5.0.0.0"
         },
         "runtime": {
           "SynthConsole.dll": {}
+        }
+      },
+      "Melanchall.DryWetMidi/5.1.2": {
+        "runtime": {
+          "lib/netstandard2.0/Melanchall.DryWetMidi.dll": {
+            "assemblyVersion": "5.1.2.0",
+            "fileVersion": "5.1.2.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
@@ -34,6 +43,7 @@
           }
         }
       },
+      "System.Reactive/5.0.0": {},
       "System.Resources.Extensions/4.7.0": {
         "runtime": {
           "lib/netstandard2.0/System.Resources.Extensions.dll": {
@@ -51,10 +61,20 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "Synthesizer/1.0.0": {
         "dependencies": {
-          "NAudio": "1.10.0"
+          "Melanchall.DryWetMidi": "5.1.2",
+          "NAudio": "1.10.0",
+          "System.Reactive": "5.0.0"
         },
         "runtime": {
           "Synthesizer.dll": {}
+        }
+      },
+      "System.Reactive.Reference/5.0.0.0": {
+        "runtime": {
+          "System.Reactive.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
         }
       }
     }
@@ -64,6 +84,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Melanchall.DryWetMidi/5.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RgGf+uNRA4RaappCm0V7YDX7RDuXuTa1HNmHSm2MLZj+537TZJQr3fb0xpDetsqrb4up1usBUCiq0o3JwnQy2A==",
+      "path": "melanchall.drywetmidi/5.1.2",
+      "hashPath": "melanchall.drywetmidi.5.1.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
@@ -85,6 +112,13 @@
       "sha512": "sha512-y6VvwSPfJhElUllkzE2FHXHAADYFGLwMPt048KlPyuUXcq4E0VEi+4hWrFd+lBsrb+Q5DvPA9w86oRTvKRO9UQ==",
       "path": "naudio/1.10.0",
       "hashPath": "naudio.1.10.0.nupkg.sha512"
+    },
+    "System.Reactive/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "path": "system.reactive/5.0.0",
+      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
     },
     "System.Resources.Extensions/4.7.0": {
       "type": "package",
@@ -109,6 +143,11 @@
     },
     "Synthesizer/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Reactive.Reference/5.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

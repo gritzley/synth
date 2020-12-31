@@ -14,3 +14,6 @@ C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netc
 C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.csproj.CopyComplete
 C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.dll
 C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\obj\Debug\netcoreapp3.1\SynthConsole.pdb
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\Melanchall.DryWetMidi.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\System.Reactive.dll
+C:\Users\Fritz Lloyd Wetzel\source\repos\Synthesizer\SynthConsole\bin\Debug\netcoreapp3.1\System.Reactive.xml

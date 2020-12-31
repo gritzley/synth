@@ -4,17 +4,22 @@ using Synthesizer;
 using System.Threading;
 using System.Windows;
 using System.Windows.Media;
-using Melanchall.DryWetMidi.Devices;
-using Melanchall.DryWetMidi.Core;
-using InputDevice = Melanchall.DryWetMidi.Devices.InputDevice;
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 using System.Reactive.Linq;
-using System.Windows.Input;
+//using System.Windows.Input;
 using DevExpress.Mvvm;
 using System.Linq;
 using DevExpress.Mvvm.Native;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
+using Windows.Devices.Enumeration;
+using Windows.Devices.Midi;
+using System.Threading.Tasks;
+using System.Windows.Controls;
+using Windows.UI.Core;
+using Melanchall.DryWetMidi.Devices;
 
 namespace SynthView.ViewModels
 {
@@ -22,54 +27,46 @@ namespace SynthView.ViewModels
     public class MainWindowVM
     {
         public SynthData SynthData;
-        public Synth synth;
+        public Synth Synth;
         public virtual double Pitch { get; set; }
+        public string[] MIDIDeviceNames;
         public MainWindowVM()
         {
             SynthData = new SynthData();
-            SynthData.OSCount = 1;
-            synth = new Synth(SynthData);
+            Synth = new Synth(SynthData);
 
             Pitch = 60;
 
-            synth.Play();
+            Synth.Play();
 
-            synth.AddPitch(30);
-
-            InputDevice
+            MIDIDeviceNames = InputDevice
                 .GetAll()
-                .ForEach(inputDevice =>
-                {
-                    inputDevice.EventReceived += OnEventReceived;
-                    inputDevice.StartEventsListening();
-                });
-        }
-        private void OnEventReceived(object sender, MidiEventReceivedEventArgs e)
-        {
-            var midiDevice = (MidiDevice)sender;
-            long night = e.Event.DeltaTime;
-        }
+                .Select(inputDevice => inputDevice.Name)
+                .ToArray();
 
+            Synth.InputDevice = InputDevice.GetByName("Axiom A.I.R. Mini32");
+
+        }
         public void ToggleNoteA()
         {
-            if (!synth.HasPitch(40))
+            if (!Synth.HasPitch(40))
             {
-                synth.AddPitch(40);
+                Synth.AddPitch(40);
             }
             else
             {
-                synth.RemovePitch(40);
+                Synth.RemovePitch(40);
             }
         }
         public void ToggleNoteB()
         {
-            if (!synth.HasPitch(45))
+            if (!Synth.HasPitch(45))
             {
-                synth.AddPitch(45);
+                Synth.AddPitch(45);
             }
             else
             {
-                synth.RemovePitch(45);
+                Synth.RemovePitch(45);
             }
         }
     }

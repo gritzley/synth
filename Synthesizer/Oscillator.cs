@@ -27,7 +27,7 @@ namespace Synthesizer
         private SingleWaveProvider[] waves;
         private WaveOutEvent[] waveOuts;
 
-        public Oscillator (short pitchDepth = 5) : base (pitchDepth)
+        public Oscillator (short pitchDepth = 4) : base (pitchDepth)
         {
             waves = new SingleWaveProvider[pitchDepth];
             waveOuts = new WaveOutEvent[pitchDepth];
